@@ -36,7 +36,44 @@
             }
           },
           "configurations": {
+            "local": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.local.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true
+            },
+            "development": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.dev.ts"
+                }
+              ],
+              "optimization": false,
+              "extractLicenses": false,
+              "sourceMap": true
+            },
+            "homologacao": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.hml.ts"
+                }
+              ],
+              "optimization": false,
+              "sourceMap": true
+            },
             "production": {
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.prod.ts"
+                }
+              ],
               "budgets": [
                 {
                   "type": "initial",
@@ -50,11 +87,6 @@
                 }
               ],
               "outputHashing": "all"
-            },
-            "development": {
-              "optimization": false,
-              "extractLicenses": false,
-              "sourceMap": true
             }
           },
           "defaultConfiguration": "production"
@@ -62,11 +94,17 @@
         "serve": {
           "builder": "@angular/build:dev-server",
           "configurations": {
-            "production": {
-              "buildTarget": "angular-task-app2:build:production"
+            "local": {
+              "buildTarget": "angular-task-app2:build:local"
             },
             "development": {
               "buildTarget": "angular-task-app2:build:development"
+            },
+            "homologacao": {
+              "buildTarget": "angular-task-app2:build:homologacao"
+            },
+            "production": {
+              "buildTarget": "angular-task-app2:build:production"
             }
           },
           "defaultConfiguration": "development"
