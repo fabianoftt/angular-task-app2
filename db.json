@@ -1,0 +1,16 @@
+{
+  "Tasks": [
+    {
+      "id": 1,
+      "tarefa": "Comprar pc",
+      "categoria": "compras",
+      "concluido": true
+    },
+    {
+      "id": 2,
+      "tarefa": "Comprar casa",
+      "categoria": "imovel",
+      "concluido": false
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+.container {
+  width: 300px;
+  height: 200px;
+  border: 2px solid #333; /* borda sólida */
+  margin: 20px auto; /* centraliza horizontalmente */
+  padding: 15px; /* espaço interno */
+  background-color: #f9f9f9; /* cor de fundo */
+}
